@@ -15,11 +15,11 @@ AudioSegment.ffprobe = "C:\ffmpeg-2024-08-18-git-7e5410eadb-full_build (1)\ffmpe
 audio_path = r"C:\Users\hi\Downloads\output_audio.mp3"
 
 # Convert mp3 to wav (SpeechRecognition library works better with wav files)
-#audio_wav_path = r"C:\Users\hi\Downloads\output_audio.wav"
+audio_wav_path = r"C:\Users\hi\Downloads\output_audio.wav"
 
 # Convert the audio file to wav format
-#audio =AudioSegment.from_mp3(audio_path)
-#audio.export(audio_wav_path, format="wav")
+audio =AudioSegment.from_mp3(audio_path)
+audio.export(audio_wav_path, format="wav")
 
 # Initialize the recognizer
 recognizer = sr.Recognizer()
