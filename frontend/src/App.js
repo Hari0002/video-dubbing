@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
-import AudioUpload from './components/AudioUpload';
-import TranscriptionDisplay from './components/TranscriptionDisplay';
+import VideoUpload from './components/VideoUpload';
+import VideoPlayer from './components/VideoPlayer';
 
 function App() {
-  const [transcription, setTranscription] = useState('');
+  const [videoSrc, setVideoSrc] = useState('');
+
+  const handleUpload = (data) => {
+    setVideoSrc(data.video_url);
+  };
 
   return (
     <div className="App">
-      <h1>Audio to Text Translation</h1>
-      <AudioUpload onTranscription={setTranscription} />
-      <TranscriptionDisplay transcription={transcription} />
+      <h1>Video Dubbing Application</h1>
+      <VideoUpload onUpload={handleUpload} />
+      {videoSrc && <VideoPlayer videoSrc={videoSrc} />}
     </div>
   );
 }
