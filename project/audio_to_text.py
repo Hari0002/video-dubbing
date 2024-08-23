@@ -3,8 +3,8 @@ from pydub import AudioSegment
 from pydub.utils import mediainfo
 
 # Specify the paths to ffmpeg and ffprobe
-#AudioSegment.ffmpeg = "C:\ffmpeg-2024-08-18-git-7e5410eadb-full_build (1)\ffmpeg-2024-08-18-git-7e5410eadb-full_build\doc\ffmpeg.html"
-#AudioSegment.ffprobe = "C:\ffmpeg-2024-08-18-git-7e5410eadb-full_build (1)\ffmpeg-2024-08-18-git-7e5410eadb-full_build\doc\ffprobe.html"
+AudioSegment.ffmpeg = "C:\ffmpeg-2024-08-18-git-7e5410eadb-full_build (1)\ffmpeg-2024-08-18-git-7e5410eadb-full_build\doc\ffmpeg.html"
+AudioSegment.ffprobe = "C:\ffmpeg-2024-08-18-git-7e5410eadb-full_build (1)\ffmpeg-2024-08-18-git-7e5410eadb-full_build\doc\ffprobe.html"
 
 # Example of using mediainfo to check ffprobe
 
