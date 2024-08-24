@@ -1,39 +1,32 @@
 import speech_recognition as sr
 from pydub import AudioSegment
-from pydub.utils import mediainfo
 
 # Specify the paths to ffmpeg and ffprobe
-#AudioSegment.ffmpeg = "C:\ffmpeg-2024-08-18-git-7e5410eadb-full_build (1)\ffmpeg-2024-08-18-git-7e5410eadb-full_build\doc\ffmpeg.html"
-#AudioSegment.ffprobe = "C:\ffmpeg-2024-08-18-git-7e5410eadb-full_build (1)\ffmpeg-2024-08-18-git-7e5410eadb-full_build\doc\ffprobe.html"
-
-# Example of using mediainfo to check ffprobe
-
-
-
+AudioSegment.ffmpeg = r"C:\ffm\ffmpeg.exe"
+AudioSegment.ffprobe = r"C:\ffm\ffprobe.exe"
 
 # Path to the audio file
 audio_path = r"C:\Users\hi\Downloads\output_audio.mp3"
 
 # Convert mp3 to wav (SpeechRecognition library works better with wav files)
-#audio_wav_path = r"C:\Users\hi\Downloads\output_audio.wav"
+audio_wav_path = r"C:\Users\hi\Downloads\output_audio.wav"
 
 # Convert the audio file to wav format
-#audio =AudioSegment.from_mp3(audio_path)
-#audio.export(audio_wav_path, format="wav")
+audio = AudioSegment.from_mp3(audio_path)
+audio.export(audio_wav_path, format="wav")
 
-# Initialize recognizer
+# Initialize the recognizer
 recognizer = sr.Recognizer()
 
 try:
     # Load the WAV file
-    with sr.AudioFile(audio_path_wav) as source:
+    with sr.AudioFile(audio_wav_path) as source:
         audio_data = recognizer.record(source)
         
-        # Recognize the audio
-        text = recognizer.recognize_google(audio_data)
+        # Recognize the audio using Google Web Speech API
+        text = recognizer.recognize_google(audio_data, language="en-US")
+        
         print("Transcription:")
-        text = recognizer.recognize_google(audio_data, language="en-US")  # or specify another language code
-
         print(text)
 except sr.UnknownValueError:
     print("Google Web Speech API could not understand the audio")
