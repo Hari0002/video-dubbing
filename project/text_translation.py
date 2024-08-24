@@ -5,8 +5,8 @@ def translate_text(text, target_language):
     translation = translator.translate(text)
     return translation
 
-def chunk_text(text, chunk_size=5000):
-    # Split text into chunks of a specified size
+def chunk_text(text, chunk_size=500):
+    # Split the text into chunks of a specified size
     return [text[i:i + chunk_size] for i in range(0, len(text), chunk_size)]
 
 def translate_file(input_file_path, output_file_path, target_language):
