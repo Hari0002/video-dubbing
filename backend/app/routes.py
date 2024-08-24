@@ -20,17 +20,17 @@ def upload_video():
 
     return jsonify({'video_url': video_path}), 200  # Return the video path
 
-# Route to handle audio-video syncing
+
 @app.route('/sync', methods=['POST'])
 def sync_audio():
     video_path = request.json.get('video_path')
     audio_path = request.json.get('audio_path')
 
-    # Check if both video and audio paths are provided
+   
     if not video_path or not audio_path:
         return jsonify({'error': 'Video or audio path missing'}), 400
 
-    # Use utility function to sync audio with video
+    
     output_url = sync_audio_with_video(video_path, audio_path)
     return jsonify({'output_url': output_url}), 200  # Return the path to the dubbed video
 
