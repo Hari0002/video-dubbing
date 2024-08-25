@@ -32,10 +32,10 @@ def translate_file(input_file_path, output_file_path, target_language):
         print(f"An error occurred: {e}")
 
 # Example usage
-input_file_path = r"C:\Users\hi\Downloads\inp_text.txt"
-output_file_path_hindi = r"C:\Users\hi\Downloads\output_text_hindi.txt"
-output_file_path_tamil = r"C:\Users\hi\Downloads\output_text_tamil.txt"
-output_file_path_urdu = r"C:\Users\hi\Downloads\output_text_urdu.txt"
+input_file_path = r"C:\Users\harin\Downloads\outputs\transcription_output.txt"
+output_file_path_hindi = r"C:\Users\harin\Downloads\outputs\output_text_hindi.txt"
+output_file_path_tamil = r"C:\Users\harin\Downloads\outputs\output_text_tamil.txt"
+output_file_path_urdu = r"C:\Users\harin\Downloads\outputs\output_text_urdu.txt"
 
 # Translate to Hindi
 translate_file(input_file_path, output_file_path_hindi, "hi")

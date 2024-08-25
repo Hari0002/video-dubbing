@@ -9,7 +9,7 @@ def text_to_audio(text, audio_output_path, lang='hi'):
         
         # Optionally, use pydub to load and manipulate the audio file
         audio = AudioSegment.from_file(audio_output_path)
-        audio.export(audio_output_path, format="mp3")
+        audio.export(audio_output_path, format="wav")
         
         print(f"Audio file saved successfully at: {audio_output_path}")
     except Exception as e:
@@ -28,8 +28,8 @@ def convert_translated_text_file_to_audio(input_file_path, output_audio_path, la
         print(f"An error occurred: {e}")
 
 # Example usage
-input_file_path = r"C:\Users\hi\Downloads\output_text_urdu.txt"
-output_audio_path = r"C:\Users\hi\Downloads\output_audio.mp3"
+input_file_path = r"C:\Users\harin\Downloads\outputs\output_text_hindi.txt"
+output_audio_path = r"C:\Users\harin\Downloads\outputs\output_audio_hindi.mp3"
 
 # Convert translated text file to audio
 convert_translated_text_file_to_audio(input_file_path, output_audio_path, lang='hi')  # 'hi' for Hindi, adjust as needed

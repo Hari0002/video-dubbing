@@ -1,7 +1,7 @@
 from moviepy.editor import VideoFileClip
 
 # Path to the video file
-video_path = r"C:\Users\harin\Downloads\Eagles - Hotel California (Live 1977) (Official Video) [HD].mp4"
+video_path = r"C:\Users\harin\Downloads\outputs\video_download.mp4"
 
 # Path where the extracted audio will be saved
 audio_output_path = r"C:\Users\harin\Downloads\output_audio.mp3"

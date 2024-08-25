@@ -19,9 +19,9 @@ def merge_audio_with_video(video_path, audio_path, output_path):
         print(f"An error occurred: {e}")
 
 # Example usage
-video_path = r"C:\Users\hi\Downloads\original_video.mp4"
-audio_path = r"C:\Users\hi\Downloads\translated_audio.mp3"
-output_path = r"C:\Users\hi\Downloads\final_video.mp4"
+video_path = r"C:\Users\harin\Downloads\outputs\video_download.mp4"
+audio_path = r"C:\Users\harin\Downloads\outputs\output_audio_hindi.mp3"
+output_path = r"C:\Users\harin\Downloads\outputs\final_video.mp4"
 
 # Merge the translated audio with the original video
 merge_audio_with_video(video_path, audio_path, output_path)
