@@ -15,7 +15,8 @@ def extract_audio_from_video(video_path, audio_output_path):
         print(f"An error occurred while extracting audio: {e}")
 
 def preprocess_audio(audio_path_mp3, audio_path_wav):
-    audio = AudioSegment.from_mp3(audio_path_mp3)
+    new_var = AudioSegment.from_mp3(audio_path_mp3)
+    audio = new_var
     audio = audio.set_frame_rate(16000).set_channels(1)
     audio = effects.normalize(audio)
     audio.export(audio_path_wav, format="wav")
